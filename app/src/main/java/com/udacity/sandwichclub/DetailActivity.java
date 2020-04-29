@@ -23,7 +23,7 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-        ImageView imageView = findViewById(R.id.imageView);
+        ImageView imageView = findViewById(R.id.iv_food);
 
         Intent intent = getIntent();
         if (intent == null) {
@@ -62,10 +62,10 @@ public class DetailActivity extends AppCompatActivity {
     }
 
     private void populateUI(Sandwich sandwich) {
-        TextView alsoKnownAsTextView = findViewById(R.id.also_knownTextView);
-        TextView ingredientsTextView = findViewById(R.id.ingredientsTextView);
-        TextView placeOfOriginTextView = findViewById(R.id.placeOfOriginTextView);
-        TextView descriptionTextView = findViewById(R.id.descriptionTextView);
+        TextView alsoKnownAsTextView = findViewById(R.id.tv_also_known);
+        TextView ingredientsTextView = findViewById(R.id.tv_ingredients);
+        TextView placeOfOriginTextView = findViewById(R.id.tv_poo);
+        TextView descriptionTextView = findViewById(R.id.tv_desc);
 
         StringBuilder alsoKnownSB = new StringBuilder();
         List<String> alsoKnownList = sandwich.getAlsoKnownAs();

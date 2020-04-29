@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        mRecyclerView = findViewById(R.id.sandwichesRV);
+        mRecyclerView = findViewById(R.id.rv_sandwiches);
         mRecyclerView.setHasFixedSize(true);
 
         prepareSandwichItems();
@@ -47,7 +47,6 @@ public class MainActivity extends AppCompatActivity {
             setListLayout();
         }
         mRecyclerView.setAdapter(mSandwichAdapter);
-        runLayoutAnimation();
     }
 
 
@@ -113,12 +112,6 @@ public class MainActivity extends AppCompatActivity {
             mMenu.findItem(R.id.action_grid_item).setVisible(true);
             mMenu.findItem(R.id.action_list_item).setVisible(false);
         }
-    }
-
-    private void runLayoutAnimation(  ) {
-        final Context context = mRecyclerView.getContext();
-        mRecyclerView.getAdapter().notifyDataSetChanged();
-        mRecyclerView.scheduleLayoutAnimation();
     }
 
 

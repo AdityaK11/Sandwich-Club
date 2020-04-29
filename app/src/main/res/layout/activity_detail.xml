@@ -12,7 +12,7 @@
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/iv_food"
             android:layout_width="match_parent"
             android:layout_height="@dimen/dimen_200dp"
             android:adjustViewBounds="true"
@@ -21,7 +21,6 @@
             tools:srcCompat="@tools:sample/backgrounds/scenic" />
 
         <TextView
-            android:id="@+id/alsoKnown"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dimen_8dp"
@@ -33,7 +32,7 @@
             android:textColor="@color/colorBlack"/>
 
         <TextView
-            android:id="@+id/also_knownTextView"
+            android:id="@+id/tv_also_known"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dimen_8dp"
@@ -43,7 +42,6 @@
             />
 
         <TextView
-            android:id="@+id/ingredients"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dimen_8dp"
@@ -58,14 +56,13 @@
             />
 
         <TextView
-            android:id="@+id/ingredientsTextView"
+            android:id="@+id/tv_ingredients"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dimen_8dp"
             android:layout_marginLeft="@dimen/dimen_8dp"/>
 
         <TextView
-            android:id="@+id/placeOfOrigin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/dimen_8dp"
@@ -76,7 +73,7 @@
             android:textColor="@color/colorBlack"/>
 
         <TextView
-            android:id="@+id/placeOfOriginTextView"
+            android:id="@+id/tv_poo"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dimen_8dp"
@@ -85,7 +82,6 @@
 
 
         <TextView
-            android:id="@+id/description"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginStart="@dimen/dimen_8dp"
@@ -99,7 +95,7 @@
             android:textColor="@color/colorBlack"/>
 
         <TextView
-        android:id="@+id/descriptionTextView"
+        android:id="@+id/tv_desc"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/dimen_8dp"
