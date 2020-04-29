@@ -23,7 +23,7 @@ public class DetailActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_detail);
 
-        ImageView imageView = findViewById(R.id.iv_food);
+        ImageView ingredientsIv = findViewById(R.id.image_iv);
 
         Intent intent = getIntent();
         if (intent == null) {
@@ -47,11 +47,10 @@ public class DetailActivity extends AppCompatActivity {
         }
 
         populateUI(sandwich);
-        Picasso.get()
+        Picasso.with(this)
                 .load(sandwich.getImage())
                 .placeholder(R.drawable.placeholder)
-                .error(R.drawable.error)
-                .into(imageView);
+                .into(ingredientsIv);
 
         setTitle(sandwich.getMainName());
     }
@@ -62,10 +61,10 @@ public class DetailActivity extends AppCompatActivity {
     }
 
     private void populateUI(Sandwich sandwich) {
-        TextView alsoKnownAsTextView = findViewById(R.id.tv_also_known);
-        TextView ingredientsTextView = findViewById(R.id.tv_ingredients);
-        TextView placeOfOriginTextView = findViewById(R.id.tv_poo);
-        TextView descriptionTextView = findViewById(R.id.tv_desc);
+        TextView alsoKnownAsTextView = findViewById(R.id.also_known_tv);
+        TextView ingredientsTextView = findViewById(R.id.ingredients_tv);
+        TextView placeOfOriginTextView = findViewById(R.id.origin_tv);
+        TextView descriptionTextView = findViewById(R.id.description_tv);
 
         StringBuilder alsoKnownSB = new StringBuilder();
         List<String> alsoKnownList = sandwich.getAlsoKnownAs();
