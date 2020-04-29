@@ -66,28 +66,8 @@ public class DetailActivity extends AppCompatActivity {
         TextView placeOfOriginTextView = findViewById(R.id.origin_tv);
         TextView descriptionTextView = findViewById(R.id.description_tv);
 
-        StringBuilder alsoKnownSB = new StringBuilder();
-        List<String> alsoKnownList = sandwich.getAlsoKnownAs();
-        if(alsoKnownList.size() >0) {
-            for (int i = 0; i < alsoKnownList.size(); i++) {
-                alsoKnownSB.append(alsoKnownList.get(i));
-                if (i < alsoKnownList.size() - 1) {
-                    alsoKnownSB.append(", ");
-                }
-            }
-            alsoKnownAsTextView.setText(alsoKnownSB.toString());
-        }
-
-        StringBuilder ingredientsSB = new StringBuilder();
-        List<String> ingredientsList= sandwich.getIngredients();
-        for(int i= 0; i< ingredientsList.size(); i++){
-            ingredientsSB.append(ingredientsList.get(i));
-            if(i < ingredientsList.size()-1){
-                ingredientsSB.append("\n");
-            }
-        }
-
-        ingredientsTextView.setText(ingredientsSB.toString());
+        alsoKnownAsTextView.setText(sandwich.getAlsoKnownAs());
+        ingredientsTextView.setText(sandwich.getIngredients());
         placeOfOriginTextView.setText(sandwich.getPlaceOfOrigin());
         descriptionTextView.setText(sandwich.getDescription());
     }
